@@ -1,8 +1,9 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import url
 from django.conf import settings
 from manager import VarnishManager
 
+from varnishapp.views import management
 
-urlpatterns = patterns('varnishapp.views',
-    (r'', 'management'),
-)
+urlpatterns = [
+    url(r'', management),
+]
